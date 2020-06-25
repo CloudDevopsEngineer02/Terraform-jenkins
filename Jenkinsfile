@@ -17,7 +17,7 @@ pipeline {
   }
 }
 def  getTerraformPAth(){
-	def tfHome = tool name: ‘terraform-01226’, type: ‘org.jenkinsci.plugins.terraform.TerraformInstallation’
+	def tfHome = tool name: ‘terraform-01226’, type: "type: 'org.jenkinsci.plugins.terraform.TerraformInstallation"
 return rfHome
 
 }
