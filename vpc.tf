@@ -1,13 +1,7 @@
-
-
-
-resource "aws_vpc" "north_virgin_vpc" {
-
-  cidr_block       = "${var.var2}"
-  instance_tenancy = "default"
-
+resource "aws_vpc" "javahome_vpc" {
+  cidr_block       = "${var.vpc_cidr}"
+  instance_tenancy = "${var.tenancy}"
   tags = {
-    name        = "NV VPC"
-    Environment = "${terraform.workspace}"
+    Name = "${terraform.workspace}-javahome-vpc"
   }
 }
