@@ -3,7 +3,7 @@
 pipeline {
   agent any {
     environment {
-  PATH = ""${PATH}""
+      PATH = "${PATH}:${getTerraformPAth()}"
 }
     stages {
         stage ('terraform-init-stage'){
@@ -15,4 +15,9 @@ pipeline {
         }
     }
   }
+}
+def  getTerraformPAth(){
+	def tfHome = tool name: ‘terraform-01226’, type: ‘org.jenkinsci.plugins.terraform.TerraformInstallation’
+return rfHome
+
 }
