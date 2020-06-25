@@ -1,4 +1,4 @@
-# is an declarative pipeline
+/*is an declarative pipeline*/
 
 pipeline {
   agent any {
